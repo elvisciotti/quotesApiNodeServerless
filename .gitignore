@@ -1,0 +1,9 @@
+js-ecdocs
+node_modules
+data/quotes.db
+.DS_Store
+.idea
+.serverless
+# the following can be excluded. Including only to make instant deploy faster
+db
+

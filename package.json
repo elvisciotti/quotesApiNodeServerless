@@ -1,0 +1,17 @@
+{
+  "name": "quotesapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js localServer",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "serverless-http": "^2.5.0",
+    "sqlite3": "^5.0.0"
+  }
+}
