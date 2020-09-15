@@ -3,8 +3,9 @@ version: '3'
 services:
   app:
     build: .
-    volumes:
-      - .:/app:cached
+    # better not to share, to allow different node_module binaries. Disable for special cases only
+    # volumes:
+    #   - .:/app:cached
     ports:
       - 3001:3000
 

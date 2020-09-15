@@ -12,17 +12,27 @@ See the [detailed article](https://medium.com/@elvisciotti/how-to-create-a-serve
 
 # Endpoints
 
-    curl /tags
-    ["age","alone"]
+    curl -s "http://localhost:3001/tags" | python -m json.tool
+    [
+        "age",
+        "alone",
+        "amazing",
+        ...
+    ]    
     
-    # get one random quote
-    curl /quotes
-    [{"quote":"Those who ..","author":"Jean Giraudoux","tag":"smile"}]
-    
-    # two quotes
-    curl /quotes?limit=2
-    # filter by tag
-    curl "/quotes?limit=2&tags=smile"
+    curl -s "/quotes?limit=2&tag=age" | python -m json.tool
+    [
+        {
+            "author": "Clive Owen",
+            "quote": "If you explode onto the scene at a very young age, there are so many people pulling you in different directions. It takes time to recalibrate and see what's important.",
+            "tag": "age"
+        },
+        {
+            "author": "Cindy Crawford",
+            "quote": "The face you have at age 25 is the face God gave you, but the face you have after 50 is the face you earned.",
+            "tag": "age"
+        }
+    ]
 
 # Local run
     docker-compose up --build
@@ -33,7 +43,10 @@ test with
  
     `curl http://localhost:3001/tags`
 
-(note: internal port is 3000, see `docker-compose.yml`)
+# tests
+
+    npm test
+ 
 
 # Deploy (AWS)
 

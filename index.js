@@ -1,8 +1,11 @@
 const serverless = require('serverless-http');
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
-const app = express();
 const dbPath = __dirname + '/db/quotes.db';
+const cors = require('cors');
+
+const app = express();
+app.use(cors());
 
 // endpoints
 app.get('/tags', function (req, res) {
