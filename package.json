@@ -1,13 +1,13 @@
 {
   "name": "quotesapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "Testing a serverless SQLite db application",
   "main": "index.js",
   "scripts": {
     "run": "node index.js localServer",
     "test": "docker-compose up -d; ./node_modules/jest/bin/jest.js"
   },
-  "author": "",
+  "author": "Elvis Ciotti / Michael Stallings",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
